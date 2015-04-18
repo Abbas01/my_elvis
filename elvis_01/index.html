@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Elvis</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="css/style.css">
+  <style type="text/css">
+  body,td,th {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+	background-color: #A63232;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+  </style>
+  <script src="js/lib/angular/angular.min.js"></script>
+  <script src="js/lib/angular/angular-route.min.js"></script>
+  <script src="js/lib/angular/angular-animate.min.js"></script>
+
+  <script src="https://cdn.firebase.com/js/client/2.1.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
+
+
+
+  <script src="js/app.js"></script>
+  <script src="js/services/authentication.js"></script>
+  <script src="js/services/countElviss.js"></script>
+  <script src="js/controllers/Elviss.js"></script>
+
+
+</head>
+<body>
+<header>
+  <nav class="cf" ng-include="'views/nav.html'"></nav>
+</header>
+<div class="page">
+   <span style=""><a href="views/Elviss.html" >Elvis</a> </span>
+<div class="userinfo" 
+    ng-controller="StatusController" ng-show="currentUser">
+  
+  
+</div> 
+  <main class="cf" ng-view> </main>
+</div>
+</body>
+</html>

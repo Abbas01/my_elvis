@@ -1,0 +1,51 @@
+<div class="Elviss cf">
+
+  <h1>Press To Add Elvis Users</h1>
+  <form class="formgroup addElvis cf"
+    name="myform"
+    ng-submit="addElvis()"
+    novalidate>
+    <div class="inputwrapper">
+      <input type="text" name="Elvisname"  placeholder="First name" ng-model="Elvisname" ng-required="true">
+    <input type="text" name="lastname" placeholder="Last Name" autofocus ng-model="lastname" ng-required="true">
+    <input type="email" name="email" placeholder="Email" autofocus ng-model="email" ng-required="true">
+    <p class="error validationerror" ng-show="myform.emaill.$invalid && myform.email.$touched"> 
+        Must be a valid email </p>
+    <input type="text" name="description" placeholder="Description" autofocus ng-model="description" ng-required="true">
+    <input type="date" name="date" placeholder="Date" autofocus ng-model="date" ng-required="true">
+    
+  
+
+    </div>
+    <button type="submit" class="btn"
+      ng-disabled="myform.$invalid">Add</button>
+  </form>
+
+  <h2>Your Report</h2>
+  <div class="Elvis" ng-repeat="(key, Elvis) in Elviss">
+    <button class="btn btn-delete tooltip"
+      ng-click="deleteElvis(key)">
+    <span>Delete this report</span></button>
+
+  <!--  <a class="btn btn-list tooltip" 
+      ng-href="#/checkins/{{currentUser.regUser}}/{{key}}/checkinsList">
+      <span>View list of checked in users</span></a>
+
+    <a class="btn btn-checkin tooltip" 
+      ng-href="#/checkins/{{currentUser.regUser}}/{{key}}">
+      <span>Go to check-in URL</span></a>
+-->
+   <span class="text">{{Elvis.name}} {{Elvis.lastname}}
+        <br> {{Elvis.email}} <br> {{Elvis.description}} <br> {{Elvis.number}}
+    </span>
+
+
+<table> <tr> 
+        <td>{{Elvis.name}} {{Elvis.lastname}}</td> <br>
+        <td>{{Elvis.email}} </td> <br>
+        <td> {{Elvis.description}} </td> <br>
+        <td> {{Elvis.number}} </td> <br>
+        </tr> </table>
+
+</div><!-- Elvis list -->
+</div><!-- Elviss cf -->
