@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Aliens Abduction</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/ionic.bundle.js"></script>
+
+  <script src="js/lib/angular/angular.min.js"></script>
+  <script src="js/lib/angular/angular-route.min.js"></script>
+  <script src="js/lib/angular/angular-animate.min.js"></script>
+
+  <script src="https://cdn.firebase.com/js/client/2.1.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+  <script src="js/app.js"></script>
+  <script src="js/services/authentication.js"></script>
+  <script src="js/services/countmeetings.js"></script>
+  <script src="js/controllers/meetings.js"></script>
+  <script src="js/controllers/registration.js"></script>
+  <script src="js/controllers/status.js"></script>
+  <script src="js/controllers/checkins.js"></script>
+  <script src="js/directives/confirm.js"></script>
+</head>
+<body>
+<header>
+  <nav class="cf" ng-include="'views/nav.html'">Hello Elvis</nav>
+</header>
+<div class="page">
+   <!-- <a href="views/meetings.html" >Report an abduction!</a> -->
+  <!--<div class="userinfo" 
+    ng-controller="StatusController" ng-show="currentUser">
+    <span class="userinfo">Hi {{ currentUser.firstname }}</span>
+    <a ng-href="#/logout" ng-click="logout()">logout</a>
+  </div> -->
+  <main class="cf" ng-view> </main>
+</div>
+</body>
+</html>
